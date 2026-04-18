@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Pro", serif;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-bg: #0d0d0c;
+  --color-ink: #d4cfc7;
+  --color-accent: #c5a059;
+  --color-title: #f0ece6;
+  --color-muted: #888888;
+  --color-surface: rgba(197,160,89,0.05);
+  --color-border: rgba(197,160,89,0.2);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-serif antialiased selection:bg-accent selection:text-bg;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-sans tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface border border-muted/20;
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-surface/80 backdrop-blur-md border border-white/10;
+}
+
+/* Type animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}

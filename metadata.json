@@ -1,0 +1,10 @@
+{
+  "name": "Şemsiye ve Devrim",
+  "description": "Vedat Türkali'nin 'Bir Gün Tek Başına' romanı üzerinden toplumcu gerçekçilik, mitoloji ve iktidar eleştirisi üzerine interaktif bir deneme.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI Powered"
+  ]
+}
